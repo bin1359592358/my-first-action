@@ -27,4 +27,4 @@ jobs:
     
     # 4. 运行测试
     - name: 运行测试
-      run: pytest
+      run: pytest test_example.py -v
