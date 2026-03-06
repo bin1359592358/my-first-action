@@ -1,0 +1,24 @@
+# 这是你的工作流名字
+name: 打招呼机器人
+
+# 什么时候触发？答：每次推代码时
+on: [push]
+
+# 要执行的任务
+jobs:
+  say-hello:
+    # 在 Linux 虚拟机上运行
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 第一步：检出你的代码
+      - name: 检出代码
+        uses: actions/checkout@v4
+      
+      # 第二步：打个招呼
+      - name: 说你好
+        run: echo "你好！你刚刚提交了代码 🎉"
+      
+      # 第三步：显示当前时间
+      - name: 显示时间
+        run: date
